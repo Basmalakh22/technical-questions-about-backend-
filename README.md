@@ -12,7 +12,7 @@ technical questions , primarily focused on concepts related to programming, soft
 1. [what is magic methods?](whatismagicmethods)
 1. [what is the difference between self and this?](whatisthedifferencebetweenselfandthis)
 1. [what is the difference between session and cookies?](whatisthedifferencebetweensessionandcookies)
-1.[Namespace and Autoloading](namespaceandautoloading)
+1. [Namespace and Autoloading](namespaceandautoloading)
 
 ## what is OOP?
 
