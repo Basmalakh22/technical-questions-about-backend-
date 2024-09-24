@@ -2,6 +2,18 @@
 
 technical questions , primarily focused on concepts related to programming, software development, and the Laravel framework.
 
+1. [what is OOP?] (whatisoop)
+1. [what is the difference between objects and classes?] (whatisthedifferencebetween objectsandclasses)
+1. [what is the difference between constructor and destructor?] (whatisthedifferencebetweenconstructoranddestructor)
+1. [what is the difference between trait and class?] (whatisthedifferencebetweentraitandclass)
+1. [what is the difference between abstract classes and interfaces?] (whatisthedifferencebetweenabstractclassesandinterfaces)
+1. [what is the difference between extend and implment?] (whatisthedifferencebetweenextendandimplment)
+1. [what is the acces modefiers?] (whatistheaccesmodefiers)
+1. [what is magic methods?] (whatismagicmethods)
+1. [what is the difference between self and this?] (whatisthedifferencebetweenselfandthis)
+1. [what is the difference between session and cookies?] (whatisthedifferencebetweensessionandcookies)
+1.[Namespace and Autoloading] (namespaceandautoloading)
+
 ## what is OOP?
 
 - Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects" which can contain data and code. Data in the form of fields (attributes or properties), and code in the form of procedures (methods).
