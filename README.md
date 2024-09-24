@@ -112,7 +112,7 @@ technical questions , primarily focused on concepts related to programming, soft
 
 |SQL | NOSQL | MYSQL |
 |:----|:----|:----|
-|stands for (Structured Query Language) is a programming language specifically designed for managing and manipulating data stored in relational databases ,it is used for Retrieving data ,Inserting data, Updating data, Deleting data, Creating new databases and tables, Setting permissions on tables, procedures, and views.|stands for “Not Only SQL”, are designed to be flexible, scalable, and capable of handling large amounts of unstructured and semi-structured data. They are particularly good for working with large sets of distributed data.|is an open-source relational database management system (RDBMS) ,“MySQL” stands for “My Structured Query Language”, It is based on the structured query language (SQL), As an RDBMS, MySQL organizes data into one or more tables where data types may be related to each other. These relations help SQL perform queries and operations on the data much more efficiently.
+|stands for (Structured Query Language) is a programming language specifically designed for managing and manipulating data stored in relational databases ,it is used for Retrieving data ,Inserting data, Updating data, Deleting data, Creating new databases and tables, Setting permissions on tables, procedures, and views.|stands for “Not Only SQL”, are designed to be flexible, scalable, and capable of handling large amounts of unstructured and semi-structured data. They are particularly good for working with large sets of distributed data.|is an open-source relational database management system (RDBMS) ,“MySQL” stands for “My Structured Query Language”, It is based on the structured query language (SQL), As an RDBMS, MySQL organizes data into one or more tables where data types may be related to each other. These relations help SQL perform queries and operations on the data much more efficiently.|
 
 ---
 
@@ -172,10 +172,4 @@ A primary key is a column or combination of columns that uniquely identifies eac
 
 |DELETE | TRUNCATE | DROP |
 |:----|:----|:----|
-|
-- DML command
-- delete all records or specific records temporary 
-- table is present 
-- rollback is supported
-- developer command |
- 
+|DML command delete all records or specific records temporary table is present rollback is supported developer command|DDL command delete all records permanently table is present rollback is not supported DBA command|DDL command delete table and all records table is not present rollback is not supported but we can restore the table by using flashback command DBA command|
