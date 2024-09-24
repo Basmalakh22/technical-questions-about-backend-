@@ -172,5 +172,10 @@ A primary key is a column or combination of columns that uniquely identifies eac
 
 |DELETE | TRUNCATE | DROP |
 |:----|:----|:----|
-|- DML command - delete all records or specific records temporary - table is present - rollback is supported - developer command |
+|
+- DML command
+- delete all records or specific records temporary 
+- table is present 
+- rollback is supported
+- developer command |
  
