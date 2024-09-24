@@ -16,6 +16,11 @@ technical questions , primarily focused on concepts related to programming, soft
 1. [what is the difference between session and cookies?](#what-is-the-difference-between-session-and-cookies)
 1. [Namespace and Autoloading](#namespace-and-autoloading)
 
+---
+---
+
+1. [SQL ,NOSQL ,MYSQL](#sql-nosql-mysql)
+
 ## what is OOP?
 
 - Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects" which can contain data and code. Data in the form of fields (attributes or properties), and code in the form of procedures (methods).
@@ -92,3 +97,17 @@ technical questions , primarily focused on concepts related to programming, soft
 
 - Namespace allows you to group related code under a specific name, improving code organization and reusability.
 - Autoloading in PHP is a mechanism that automatically loads PHP classes when they are needed, without having to manually require or include them.The most common way to implement autoloading in PHP is by using Composer, the dependency manager. Composer generates an autoloader that follows the PSR-4 standard for autoloading classes.
+
+---
+---
+
+## SQL ,NOSQL ,MYSQL
+
+|SQL | NOSQL | MYSQL |
+|:----|:----|:----|
+|stands for (Structured Query Language) is a programming language specifically designed for managing and manipulating data stored in relational databases ,it is used for Retrieving data ,Inserting data, Updating data, Deleting data, Creating new databases and tables, Setting permissions on tables, procedures, and views.|stands for “Not Only SQL”, are designed to be flexible, scalable, and capable of handling large amounts of unstructured and semi-structured data. They are particularly good for working with large sets of distributed data.|is an open-source relational database management system (RDBMS) ,“MySQL” stands for “My Structured Query Language”, It is based on the structured query language (SQL), As an RDBMS, MySQL organizes data into one or more tables where data types may be related to each other. These relations help SQL perform queries and operations on the data much more efficiently.
+
+
+- SQL stands for (Structured Query Language) is a programming language specifically designed for managing and manipulating data stored in relational databases ,it is used for Retrieving data ,Inserting data, Updating data, Deleting data, Creating new databases and tables, Setting permissions on tables, procedures, and views.
+- NOSQL stands for “Not Only SQL”, are designed to be flexible, scalable, and capable of handling large amounts of unstructured and semi-structured data. They are particularly good for working with large sets of distributed data.
+- MySQL is an open-source relational database management system (RDBMS) ,“MySQL” stands for “My Structured Query Language”, It is based on the structured query language (SQL), As an RDBMS, MySQL organizes data into one or more tables where data types may be related to each other. These relations help SQL perform queries and operations on the data much more efficiently.
