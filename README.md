@@ -4,7 +4,7 @@ technical questions , primarily focused on concepts related to programming, soft
 
 ## About OOP
 
-1. [what is OOP?](whatisoop)
+1. [what is OOP?](#what-is-oop)
 1. [what is the difference between objects and classes?](whatisthedifferencebetweenobjectsandclasses)
 1. [what is the difference between constructor and destructor?](whatisthedifferencebetweenconstructoranddestructor)
 1. [what is the difference between trait and class?](whatisthedifferencebetweentraitandclass)
