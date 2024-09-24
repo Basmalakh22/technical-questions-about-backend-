@@ -5,16 +5,16 @@ technical questions , primarily focused on concepts related to programming, soft
 ## About OOP
 
 1. [what is OOP?](#what-is-oop)
-1. [what is the difference between objects and classes?](whatisthedifferencebetweenobjectsandclasses)
-1. [what is the difference between constructor and destructor?](whatisthedifferencebetweenconstructoranddestructor)
-1. [what is the difference between trait and class?](whatisthedifferencebetweentraitandclass)
-1. [what is the difference between abstract classes and interfaces?](whatisthedifferencebetweenabstractclassesandinterfaces)
-1. [what is the difference between extend and implment?](whatisthedifferencebetweenextendandimplment)
-1. [what is the acces modefiers?](whatistheaccesmodefiers)
-1. [what is magic methods?](whatismagicmethods)
-1. [what is the difference between self and this?](whatisthedifferencebetweenselfandthis)
-1. [what is the difference between session and cookies?](whatisthedifferencebetweensessionandcookies)
-1. [Namespace and Autoloading](namespaceandautoloading)
+1. [what is the difference between objects and classes?](#what-is-the-difference-between-objects-and-classes)
+1. [what is the difference between constructor and destructor?](#what-is-the-difference-between-constructor-and-destructor)
+1. [what is the difference between trait and class?](#what-is-the-difference-between-trait-and-class)
+1. [what is the difference between abstract classes and interfaces?](#what-is-the-difference-between-abstract-classes-and-interfaces)
+1. [what is the difference between extend and implment?](#what-is-the-difference-between-extend-and-implment)
+1. [what is the acces modefiers?](#what-is-the-acces-modefiers)
+1. [what is magic methods?](#what-is-magic-methods)
+1. [what is the difference between self and this?](#what-is-the-difference-between-self-and-this)
+1. [what is the difference between session and cookies?](#what-is-the-difference-between-session-and-cookies)
+1. [Namespace and Autoloading](#namespace-and-autoloading)
 
 ## what is OOP?
 
