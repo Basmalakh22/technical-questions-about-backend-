@@ -39,7 +39,7 @@ technical questions , primarily focused on concepts related to programming, soft
 ## what is the difference between trait and class?
 
 - Class: A blueprint for creating objects with properties and methods.
-- Trait: A mechanism for code reuse in single inheritance languages like PHP. Traits allow you to create reusable pieces of code.Traits are used to declare methods that can be used in multiple classes. Traits can have methods and abstract methods that can be used in multiple classes, and the methods can have any access modifier (public, private, or protected).
+- Trait: A mechanism for code reuse in single inheritance languages like PHP. Traits allow you to create reusable pieces of code.Traits are used to declare methods and abstract methods that can be used in multiple classes. and the methods can have any access modifier (public, private, or protected).
 
 ---
 
