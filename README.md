@@ -20,6 +20,13 @@ technical questions , primarily focused on concepts related to programming, soft
 ---
 
 1. [SQL ,NOSQL ,MYSQL](#sql-nosql-mysql)
+1. [What is adatabase?](#what-is-adatabase)
+1. [What is relational database?](#what-is-relational-database)
+1. [What is a primary key?](#what-is-a-primary-key)
+1. [What is a foreign key?](#what-is-a-foreign-key)
+1. [What is the difference between a primary key and a unique key?](#what-is-the-difference-between-a-primary-key-and-a-unique-key)
+1. [What is normalization and different types of it?](#what-is-normalization-and-different-types-of-it)
+1. [What is a join in SQL and different types of it?](#what-is-normalization-and-different-types-of-it)
 
 ## what is OOP?
 
@@ -107,7 +114,63 @@ technical questions , primarily focused on concepts related to programming, soft
 |:----|:----|:----|
 |stands for (Structured Query Language) is a programming language specifically designed for managing and manipulating data stored in relational databases ,it is used for Retrieving data ,Inserting data, Updating data, Deleting data, Creating new databases and tables, Setting permissions on tables, procedures, and views.|stands for “Not Only SQL”, are designed to be flexible, scalable, and capable of handling large amounts of unstructured and semi-structured data. They are particularly good for working with large sets of distributed data.|is an open-source relational database management system (RDBMS) ,“MySQL” stands for “My Structured Query Language”, It is based on the structured query language (SQL), As an RDBMS, MySQL organizes data into one or more tables where data types may be related to each other. These relations help SQL perform queries and operations on the data much more efficiently.
 
+---
 
-- SQL stands for (Structured Query Language) is a programming language specifically designed for managing and manipulating data stored in relational databases ,it is used for Retrieving data ,Inserting data, Updating data, Deleting data, Creating new databases and tables, Setting permissions on tables, procedures, and views.
-- NOSQL stands for “Not Only SQL”, are designed to be flexible, scalable, and capable of handling large amounts of unstructured and semi-structured data. They are particularly good for working with large sets of distributed data.
-- MySQL is an open-source relational database management system (RDBMS) ,“MySQL” stands for “My Structured Query Language”, It is based on the structured query language (SQL), As an RDBMS, MySQL organizes data into one or more tables where data types may be related to each other. These relations help SQL perform queries and operations on the data much more efficiently.
+## What is adatabase?
+
+- A database is an organized collection of data stored and accessed electronically. It provides a way to store, organize, and retrieve large amounts of data efficiently.
+
+---
+
+## What is relational database?
+
+- organizes data into tables with rows and columns, where each row represents a record and each column represents a specific attribute of that record. The “relational” aspect comes from the ability to link these tables based on shared attributes or keys, allowing for efficient organization, querying, and manipulation of interconnected data.
+
+---
+
+## What is a primary key?
+
+- A database is an organized collection of data stored and accessed electronically. It provides a way to store, organize, and retrieve large amounts of data efficiently.
+A primary key is a column or combination of columns that uniquely identifies each row in a table. It enforces the entity integrity rule in a relational database.
+
+---
+
+## What is a foreign key?
+
+- A foreign key is a column or combination of columns that establishes a link between data in two tables. It ensures referential integrity by enforcing relationships between tables.
+
+---
+
+## What is the difference between a primary key and a unique key?
+
+- A primary key is used to uniquely identify a row in a table and must have a unique value. 
+- unique key ensures that a column or combination of columns has a unique value but does not necessarily identify the row.
+
+---
+
+## What is normalization and different types of it?
+
+- Normalization is the process of organizing data in a database to minimize redundancy and dependency. It involves breaking down a table into smaller tables and establishing relationships between them.
+  - First Normal Form (1NF)
+  - Second Normal Form (2NF)
+  - Third Normal Form (3NF) Boyce-Codd Normal Form (BCNF) Fourth Normal Form (4NF)
+  - Fifth Normal Form (5NF) or Project-Join Normal Form (PJNF)
+
+---
+
+## What is a join in SQL and different types of it?
+
+- A join is an operation used to combine rows from two or more tables based on related columns.
+  - Inner Join: Returns rows when there is a match in both tables.
+  - Left (Outer) Join: Returns all rows from the left table, and the matched rows from the right table; if there is no match, NULLs are used to fill in columns from the right table.
+  - Right (Outer) Join: Returns all rows from the right table, and the matched rows from the left table; if there is no match, NULLs are used to fill in columns from the left table.
+  - Full (Outer) Join: Returns rows when there is a match in one of the tables.
+
+---
+
+## What is the difference between DELETE and TRUNCATE in SQL DROP?
+
+|DELETE | TRUNCATE | DROP |
+|:----|:----|:----|
+|- DML command - delete all records or specific records temporary - table is present - rollback is supported - developer command |
+ 
