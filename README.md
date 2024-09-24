@@ -71,3 +71,10 @@ technical questions , primarily focused on concepts related to programming, soft
 
 - Sessions: Store data on the server side, more secure, used for storing sensitive information.
 - Cookies: Store data on the client side (browser), less secure, used for storing less sensitive information like user preferences.
+
+---
+
+## Namespace and Autoloading
+
+- Namespace allows you to group related code under a specific name, improving code organization and reusability.
+- Autoloading in PHP is a mechanism that automatically loads PHP classes when they are needed, without having to manually require or include them.The most common way to implement autoloading in PHP is by using Composer, the dependency manager. Composer generates an autoloader that follows the PSR-4 standard for autoloading classes.
