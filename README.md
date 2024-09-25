@@ -32,6 +32,9 @@ technical questions , primarily focused on concepts related to programming, soft
 1. [What is a transaction in SQL?](#what-is-a-transaction-in-sql)
 1. [What is the difference between a clustered and a non-clustered index?](#what-is-the-difference-between-a-clustered-and-a-non-clustered-index)
 1. [What is ACID in the context of database transactions?](#what-is-acid-in-the-context-of-database-transactions)
+1. [What is a deadlock?](#what-is-a-deadlock)
+1. [What is an ORM and when/why to use it?](#what-is-an-orm-and-whenwhy-to-use-it)
+1. [Database indexing (explain/when to use/tradeoffs)?](#database-indexing-explainwhen-to-usetradeoffs)
 
 ## what is OOP?
 
@@ -226,3 +229,84 @@ A primary key is a column or combination of columns that uniquely identifies eac
 |ensures that each transaction is treated as a single unit, which either succeeds completely or fails completely.|ensures that a transaction brings the database from one valid state to another.|ensures that concurrent transactions do not interfere with each other.|ensures that once a transaction is committed, its changes are permanent and survive system failures.|
 
 ---
+
+## What is a deadlock?
+
+- A deadlock occurs when two or more transactions are waiting for each other to release resources, resulting in a circular dependency. As a result, none of the transactions can proceed, and the system may become unresponsive.
+
+---
+
+## What is an ORM and when/why to use it?
+
+- ORM (Object-Relational Mapping) is a programming technique used to convert data between incompatible type systems using object-oriented programming languages. It creates a "virtual object database" that can be used from within the programming language.
+- There are several reasons to use an ORM:
+  - Simpler Data Handling: Instead of writing long SQL queries, you use simple commands in your programming language to access and manipulate data.
+  - Less Repetitive Code: It reduces the amount of repetitive code you need to write, like setting up connections and handling results.
+  - Easy Database Switching: ORMs allow you to change the database type (e.g., from MySQL to PostgreSQL) without changing much in your code.
+  - Cleaner Code: It keeps your code clean and organized, which makes it easier to maintain and ensures data is handled correctly.
+
+---
+
+## Database indexing (explain/when to use/tradeoffs)?
+
+- Database indexing is a data structure technique used to quickly locate and access the data in a database table.
+Indexes are used to speed up the retrieval of data but can also lead to slower writes and increased storage use.
+  - When to use: Indexing should be considered when the performance of SELECT queries needs to be improved, particularly on large datasets, or when specific data needs to be accessed frequently.
+  - Tradeoffs: While indexes significantly improve query speed, they also require additional disk space and can slow down data insertion, updates, and deletions because each transaction requires the index to be updated.
+
+---
+
+## What is a database view?
+
+- A database view is a virtual table based on the result-set of an SQL statement. A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database. Views can aggregate data from various tables and present it as if it were coming from a single table, thereby providing a simplified and secure method of querying data.
+  - ex. local Partitioned view,Partitioned view ,Indexed view
+
+---
+
+## What is a lock and why is it useful in databases?
+
+- A lock in a database is a way to control access to data, ensuring that only one person or process can read or change specific data at a time.
+It’s useful because:
+
+1. Prevents conflicts: Stops two people from changing the same data at the same time, avoiding errors.
+2. Keeps data accurate: Ensures data stays correct by controlling how it’s accessed.
+3. Protects ongoing work: Makes sure that one process finishes its task before another starts.
+
+---
+
+## What is Elasticsearch and when to use it and explain its tradeoffs?
+
+- Elasticsearch is a powerful search and analytics engine built on top of Apache Lucene, used to store, search, and analyze big volumes of data quickly. It’s widely used for full-text search, data logging, and monitoring systems.
+  - used in Full-Text Search,Real-Time Data , Complex Queries ,Data Aggregation
+  - designed for horizontal scalability, reliability, and easy management
+  - cons =>Complex Setup,Resource-Intensive ,Data Consistency,Not for Small Data
+
+---
+
+## How can I enhancement the SQL query?
+
+1. Use Indexes: Make sure the columns you're filtering (WHERE), joining (JOIN), or sorting (ORDER BY) are indexed for faster
+queries.
+2. Select Only What You Need: Instead of SELECT *, choose only
+the columns you need, e.g., SELECT name, age FROM users.
+3. Limit Results: If you don’t need all rows, use LIMIT to get only a
+certain number, like LIMIT 10.
+4. Simplify Joins: Try to minimize how many tables you're joining
+unless it's necessary, as too many JOINs slow things down.
+5. Use Aliases: Give your tables short names to make the query easier to read, like SELECT u.name FROM users u.
+
+---
+
+## What is the innodb?
+
+- InnoDB is a storage engine for MySQL, designed to provide high reliability and performance when processing large data volumes. It supports ACID- compliant transactions, foreign keys, and row-level locking. InnoDB is the default storage engine for MySQL and is recommended for applications that require frequent read and write operations, require transaction support, and maintain full data integrity.
+
+---
+
+## FUNCTION,STORED PROCEDURE,TRIGGER?
+
+| |Function| STORED PROCEDURE | TRIGGER |
+|:----|:----|:----|:----|
+|Purpose| Does one task and returns a single result.|Can do multiple tasks, like inserting, updating, or deleting data.|Automatically runs when something happens in the database (like adding, updating, or deleting data).|
+|Use | You can use it inside a query, like SELECT.|  You call it to run, but can't use it directly in a SELECT.| You don't call it directly. It activates by itself when a specific event occurs.|
+|Changes | It doesn't change the database, just calculates and returns data.| Can change data in the database and handle complex processes.|Can be used to modify, validate, or log changes automatically when certain actions happen in the database.|
