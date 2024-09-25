@@ -35,6 +35,12 @@ technical questions , primarily focused on concepts related to programming, soft
 1. [What is a deadlock?](#what-is-a-deadlock)
 1. [What is an ORM and when/why to use it?](#what-is-an-orm-and-whenwhy-to-use-it)
 1. [Database indexing (explain/when to use/tradeoffs)?](#database-indexing-explainwhen-to-usetradeoffs)
+1. [What is a database view?](#what-is-a-database-view)
+1. [What is a lock and why is it useful in databases?](#what-is-a-lock-and-why-is-it-useful-in-databases)
+1. [What is Elasticsearch and when to use it and explain its tradeoffs?](#what-is-elasticsearch-and-when-to-use-it-and-explain-its-tradeoffs)
+1. [How can I enhancement the SQL query?](#how-can-i-enhancement-the-sql-query)
+1. [What is the innodb?](#what-is-the-innodb)
+1. [FUNCTION,STORED PROCEDURE,TRIGGER?](#functionstored-proceduretrigger)
 
 ## what is OOP?
 
@@ -310,3 +316,5 @@ unless it's necessary, as too many JOINs slow things down.
 |Purpose| Does one task and returns a single result.|Can do multiple tasks, like inserting, updating, or deleting data.|Automatically runs when something happens in the database (like adding, updating, or deleting data).|
 |Use | You can use it inside a query, like SELECT.|  You call it to run, but can't use it directly in a SELECT.| You don't call it directly. It activates by itself when a specific event occurs.|
 |Changes | It doesn't change the database, just calculates and returns data.| Can change data in the database and handle complex processes.|Can be used to modify, validate, or log changes automatically when certain actions happen in the database.|
+
+---
