@@ -19,6 +19,8 @@ technical questions , primarily focused on concepts related to programming, soft
 ---
 ---
 
+## About DATABASE
+
 1. [SQL ,NOSQL ,MYSQL](#sql-nosql-mysql)
 1. [What is adatabase?](#what-is-adatabase)
 1. [What is relational database?](#what-is-relational-database)
