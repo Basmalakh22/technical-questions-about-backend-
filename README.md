@@ -27,6 +27,11 @@ technical questions , primarily focused on concepts related to programming, soft
 1. [What is the difference between a primary key and a unique key?](#what-is-the-difference-between-a-primary-key-and-a-unique-key)
 1. [What is normalization and different types of it?](#what-is-normalization-and-different-types-of-it)
 1. [What is a join in SQL and different types of it?](#what-is-normalization-and-different-types-of-it)
+1. [What is the difference between UNION and UNION ALL?](#what-is-the-difference-between-union-and-union-all)
+1. [Difference Between GROUP BY ,HAVING ,WHERE?](#difference-between-group-by-having-where)
+1. [What is a transaction in SQL?](#what-is-a-transaction-in-sql)
+1. [What is the difference between a clustered and a non-clustered index?](#what-is-the-difference-between-a-clustered-and-a-non-clustered-index)
+1. [What is ACID in the context of database transactions?](#what-is-acid-in-the-context-of-database-transactions)
 
 ## what is OOP?
 
@@ -143,7 +148,7 @@ A primary key is a column or combination of columns that uniquely identifies eac
 
 ## What is the difference between a primary key and a unique key?
 
-- A primary key is used to uniquely identify a row in a table and must have a unique value. 
+- A primary key is used to uniquely identify a row in a table and must have a unique value.
 - unique key ensures that a column or combination of columns has a unique value but does not necessarily identify the row.
 
 ---
@@ -177,5 +182,47 @@ A primary key is a column or combination of columns that uniquely identifies eac
 |table is present|table is present|table is not present|
 |rollback is supported|rollback is not supported|rollback is not supported but we can restore the table by using flashback command|
 |developer command|DBA command|DBA command|
+
+---
+
+## What is the difference between UNION and UNION ALL?
+
+- UNION and UNION ALL are used to combine the result sets of two or more SELECT statements.
+
+|UNION | UNION ALL|
+|:----|:----|
+|removes duplicate rows from the combined result set.| includes all rows, including duplicates.|
+
+---
+
+## Difference Between GROUP BY ,HAVING ,WHERE?
+
+|GROUP BY| HAVING | WHERE |
+|:----|:----|:----|
+|Groups rows that have the same values in specified columns into summary rows.|Filters groups after grouping.|Filters rows before grouping.|
+
+---
+
+## What is a transaction in SQL?
+
+- A transaction is a sequence of SQL statements that are executed as a single logical unit of work. It ensures data consistency and integrity by either committing all changes or rolling them back if an error occurs.
+
+---
+
+## What is the difference between a clustered and a non-clustered index?
+
+|Clustered Index| Non-clustered Index|
+|:----|:----|
+|determines the physical order of data in a table. It changes the way the data is stored on disk and can be created on only one column. A table can have only one clustered index.| does not affect the physical order of data in a table. It is stored separately and contains a pointer to the actual data. A table can have multiple non-clustered indexes.|
+
+---
+
+## What is ACID in the context of database transactions?
+
+- ACID stands for Atomicity, Consistency, Isolation, and Durability. It is a set of properties that guarantee reliable processing of database transactions.
+
+|Atomicity| Consistency | Isolation | Durability|
+|:----|:----|:----|:----|
+|ensures that each transaction is treated as a single unit, which either succeeds completely or fails completely.|ensures that a transaction brings the database from one valid state to another.|ensures that concurrent transactions do not interfere with each other.|ensures that once a transaction is committed, its changes are permanent and survive system failures.|
 
 ---
