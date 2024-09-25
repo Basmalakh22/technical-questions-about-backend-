@@ -160,7 +160,7 @@ A primary key is a column or combination of columns that uniquely identifies eac
 
 ## What is a join in SQL and different types of it?
 
-|Inner Join|Left (Outer) Join|Right (Outer) Join|Full (Outer) Join|
+|Inner Join | Left (Outer) Join | Right (Outer) Join | Full (Outer) Join |
 |:----|:----|:----|
 |Returns rows when there is a match in both tables.|Returns all rows from the left table, and the matched rows from the right table; if there is no match, NULLs are used to fill in columns from the right table.|Returns all rows from the right table, and the matched rows from the left table; if there is no match, NULLs are used to fill in columns from the left table.|Returns rows when there is a match in one of the tables.|
 
