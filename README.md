@@ -175,3 +175,8 @@ A primary key is a column or combination of columns that uniquely identifies eac
 |table is present|table is present|table is not present|
 |rollback is supported|rollback is not supported|rollback is not supported but we can restore the table by using flashback command|
 |developer command|DBA command|DBA command|
+
+- A join is an operation used to combine rows from two or more tables based on related columns.
+|Inner Join | Left (Outer) Join | Right (Outer) Join | Full (Outer) Join |
+|:----|:----|:----|
+|Returns rows when there is a match in both tables.|Returns all rows from the left table, and the matched rows from the right table; if there is no match, NULLs are used to fill in columns from the right table.|Returns all rows from the right table, and the matched rows from the left table; if there is no match, NULLs are used to fill in columns from the left table.|Returns rows when there is a match in one of the tables.|
