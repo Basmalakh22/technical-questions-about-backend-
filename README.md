@@ -172,4 +172,4 @@ A primary key is a column or combination of columns that uniquely identifies eac
 
 |DELETE | TRUNCATE | DROP |
 |:----|:----|:----|
-|DML command delete all records or specific records temporary table is present rollback is supported developer command|DDL command delete all records permanently table is present rollback is not supported DBA command|DDL command delete table and all records table is not present rollback is not supported but we can restore the table by using flashback command DBA command|
+|DML command <br> ,delete all records or specific records temporary ,table is present ,rollback is supported ,developer command|DDL command ,delete all records permanently ,table is present ,rollback is not supported ,DBA command|DDL command ,delete table and all records ,table is not present ,rollback is not supported but we can restore the table by using flashback command ,DBA command|
