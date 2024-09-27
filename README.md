@@ -337,36 +337,22 @@ unless it's necessary, as too many JOINs slow things down.
 
 ## Laravel request lifecycle?
 
- Request Enters:
-
 - When a user makes a request (e.g., visiting a URL), it first reaches the public/index.php file, which is the entry point for all requests.
-
-Bootstrap the Application:
 
 - The index.php file loads some basic settings, like auto-loading classes and configurations from bootstrap/app.php.
 - Laravel creates an instance of the application, which is the core of Laravel (also known as the service container).
-
-Kernel Handling:
 
 - The HTTP Kernel (app/Http/Kernel.php) is responsible for handling web requests.
 - Before doing anything, the kernel prepares the application by running bootstrappers (tasks like setting up error handling and detecting the environment).
 - The request is then passed through middleware (e.g., session handling, security checks).
 
-Service Providers:
-
 - Laravel loads its service providers. These are responsible for booting up the different components of Laravel, like the database, routing, and authentication.
-
-Routing:
 
 - Once the application is ready, Laravel finds the correct route for the incoming request (from routes/web.php).
 - It checks if any route-specific middleware (like authentication) needs to be applied.
 The request is passed to the matching controller or route to process the logic.
 
-Response:
-
 - The controller or route processes the request and prepares a response (like an HTML page or JSON data).
 - The response goes back through the middleware again for final modifications (e.g., adding headers or caching).
-
-Send the Response:
 
 - Finally, the response is returned to the HTTP kernel, which sends it back to the user's browser.
