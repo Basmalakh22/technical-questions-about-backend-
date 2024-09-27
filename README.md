@@ -50,6 +50,7 @@ technical questions , primarily focused on concepts related to programming, soft
 1. [What is the MVC?](#what-is-the-mvc)
 1. [Laravel request lifecycle?](#laravel-request-lifecycle)
 1. [Service Container VS Service Provider](#service-container-vs-service-provider)
+1. [Facades, Dependency Injection, and Helper Functions](#facades-dependency-injection-and-helper-functions)
 
 ---
 ---
@@ -347,3 +348,14 @@ unless it's necessary, as too many JOINs slow things down.
 | Service Container| Service Provider|
 |:----|:----|
 |is essentially a registry or a container that manages class dependencies and resolves them. It’s a powerful tool for performing dependency injection, where you can bind classes or interfaces and resolve them whenever needed.|is a mechanism to register services (including bindings to the Service Container) and configure how these services should be used by Laravel. Service providers are where you tell Laravel what to bind into the service container.|
+
+---
+
+## Facades, Dependency Injection, and Helper Functions
+
+| |Facades| Dependency Injection | Helper Functions|
+|:----|:----|:----|:----|
+|What it is|A shortcut to use Laravel services without manually creating objects.|Laravel automatically gives your class the objects (dependencies) it needs.|Simple functions that help with common tasks, like working with URLs or strings.|
+|Example| Instead of creating a cache object, you just use Cache::put(). |If your class needs a UserRepository, Laravel injects it for you.|url('home') generates a URL for you.|
+|Good for| Quick and easy access to services.| Keeping your code clean and easy to test.|Quick, one-line tasks.|
+|Downside| Can make testing and understanding your code a bit harder.|Requires a bit more setup compared to Facades.| If overused, it can make your code harder to manage.|
