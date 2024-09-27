@@ -47,7 +47,7 @@ technical questions , primarily focused on concepts related to programming, soft
 
 ## About Laravel
 
-1.[what is the MVC?](#what-is-the-mvc)
+1. [What is the MVC?](#what-is-the-mvc)
 
 ---
 ---
@@ -322,7 +322,7 @@ unless it's necessary, as too many JOINs slow things down.
 ---
 ---
 
-## what is the MVC?
+## What is the MVC?
 
 - MVC (Model-View-Controller) is a design pattern used for organizing code in a way that separates concerns, making it easier to manage and scale applications.
 
