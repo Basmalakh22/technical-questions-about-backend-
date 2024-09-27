@@ -324,7 +324,7 @@ unless it's necessary, as too many JOINs slow things down.
 
 ## What is the MVC?
 
-- MVC (Model-View-Controller) is a design pattern used for organizing code in a way that separates concerns, making it easier to manage and scale applications.
+- MVC (Model-View-Controller) is a design pattern helps keep the application organized by separating the data (Model), user interface (View), and application logic (Controller).
 
 |Model |View |Controller|
 |:----|:----|:----|
