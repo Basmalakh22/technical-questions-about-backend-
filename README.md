@@ -22,10 +22,8 @@ technical questions , primarily focused on concepts related to programming, soft
 ## About DATABASE
 
 1. [SQL ,NOSQL ,MYSQL](#sql-nosql-mysql)
-1. [What is adatabase?](#what-is-adatabase)
-1. [What is relational database?](#what-is-relational-database)
-1. [What is a primary key?](#what-is-a-primary-key)
-1. [What is a foreign key?](#what-is-a-foreign-key)
+1. [What is a database and relational database?](#what-is-a-database-and-relational-database)
+1. [What is a primary key and foreign key?](#what-is-a-primary-key-and-foreign-key)
 1. [What is the difference between a primary key and a unique key?](#what-is-the-difference-between-a-primary-key-and-a-unique-key)
 1. [What is normalization and different types of it?](#what-is-normalization-and-different-types-of-it)
 1. [What is a join in SQL and different types of it?](#what-is-normalization-and-different-types-of-it)
@@ -132,26 +130,18 @@ technical questions , primarily focused on concepts related to programming, soft
 
 ---
 
-## What is adatabase?
+## What is a database and relational database?
 
 - A database is an organized collection of data stored and accessed electronically. It provides a way to store, organize, and retrieve large amounts of data efficiently.
-
----
-
-## What is relational database?
 
 - organizes data into tables with rows and columns, where each row represents a record and each column represents a specific attribute of that record. The “relational” aspect comes from the ability to link these tables based on shared attributes or keys, allowing for efficient organization, querying, and manipulation of interconnected data.
 
 ---
 
-## What is a primary key?
+## What is a primary key and foreign key?
 
 - A database is an organized collection of data stored and accessed electronically. It provides a way to store, organize, and retrieve large amounts of data efficiently.
 A primary key is a column or combination of columns that uniquely identifies each row in a table. It enforces the entity integrity rule in a relational database.
-
----
-
-## What is a foreign key?
 
 - A foreign key is a column or combination of columns that establishes a link between data in two tables. It ensures referential integrity by enforcing relationships between tables.
 
