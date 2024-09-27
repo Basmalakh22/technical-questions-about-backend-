@@ -19,7 +19,7 @@ technical questions , primarily focused on concepts related to programming, soft
 ---
 ---
 
-## About DATABASE
+## About Database
 
 1. [SQL ,NOSQL ,MYSQL](#sql-nosql-mysql)
 1. [What is a database and relational database?](#what-is-a-database-and-relational-database)
@@ -41,6 +41,16 @@ technical questions , primarily focused on concepts related to programming, soft
 1. [How can I enhancement the SQL query?](#how-can-i-enhancement-the-sql-query)
 1. [What is the innodb?](#what-is-the-innodb)
 1. [FUNCTION,STORED PROCEDURE,TRIGGER?](#functionstored-proceduretrigger)
+
+---
+---
+
+## About Laravel
+
+1.[what is the MVC?](#what-is-the-mvc)
+
+---
+---
 
 ## what is OOP?
 
@@ -310,3 +320,14 @@ unless it's necessary, as too many JOINs slow things down.
 |Changes | It doesn't change the database, just calculates and returns data.| Can change data in the database and handle complex processes.|Can be used to modify, validate, or log changes automatically when certain actions happen in the database.|
 
 ---
+---
+
+## what is the MVC?
+
+- MVC (Model-View-Controller) is a design pattern used for organizing code in a way that separates concerns, making it easier to manage and scale applications.
+
+|Model |View |Controller|
+|:----|:----|:----|
+|Handles data and business logic.|Displays data to the user and handles the presentation layer.|Manages communication between the Model and the View.|
+|Interacts with the database to retrieve and manipulate data.|Contains the HTML, CSS, and JavaScript code that users interact with.|Receives input from the user (through HTTP requests), processes it using the Model, and returns the appropriate View.|
+|Example in Laravel: Eloquent ORM is used to interact with database tables.|Example in Laravel: Blade templates are used for views.|Example in Laravel: Controllers are created to handle the business logic and determine which data is passed to the View.|
