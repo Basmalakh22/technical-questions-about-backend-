@@ -337,22 +337,4 @@ unless it's necessary, as too many JOINs slow things down.
 
 ## Laravel request lifecycle?
 
-- When a user makes a request (e.g., visiting a URL), it first reaches the public/index.php file, which is the entry point for all requests.
-
-- The index.php file loads some basic settings, like auto-loading classes and configurations from bootstrap/app.php.
-- Laravel creates an instance of the application, which is the core of Laravel (also known as the service container).
-
-- The HTTP Kernel (app/Http/Kernel.php) is responsible for handling web requests.
-- Before doing anything, the kernel prepares the application by running bootstrappers (tasks like setting up error handling and detecting the environment).
-- The request is then passed through middleware (e.g., session handling, security checks).
-
-- Laravel loads its service providers. These are responsible for booting up the different components of Laravel, like the database, routing, and authentication.
-
-- Once the application is ready, Laravel finds the correct route for the incoming request (from routes/web.php).
-- It checks if any route-specific middleware (like authentication) needs to be applied.
-The request is passed to the matching controller or route to process the logic.
-
-- The controller or route processes the request and prepares a response (like an HTML page or JSON data).
-- The response goes back through the middleware again for final modifications (e.g., adding headers or caching).
-
-- Finally, the response is returned to the HTTP kernel, which sends it back to the user's browser.
+- The Laravel lifecycle starts when a server receives a request and directs it to the public/index.php file, which acts as the entry point. Laravel then loads the necessary framework components via service providers. The request passes through global and route-specific middleware before reaching the router. The router dispatches the request to the appropriate controller or closure, which generates a response. The response travels back through the middleware for any post-processing, and is then sent to the user.
