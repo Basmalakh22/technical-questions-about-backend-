@@ -51,6 +51,7 @@ technical questions , primarily focused on concepts related to programming, soft
 1. [Laravel request lifecycle?](#laravel-request-lifecycle)
 1. [Service Container VS Service Provider](#service-container-vs-service-provider)
 1. [Facades, Dependency Injection, and Helper Functions](#facades-dependency-injection-and-helper-functions)
+1. [GET route vs POST route](#get-route-vs-post-route)
 
 ---
 ---
@@ -359,3 +360,12 @@ unless it's necessary, as too many JOINs slow things down.
 |Example| Instead of creating a cache object, you just use Cache::put(). |If your class needs a UserRepository, Laravel injects it for you.|url('home') generates a URL for you.|
 |Good for| Quick and easy access to services.| Keeping your code clean and easy to test.|Quick, one-line tasks.|
 |Downside| Can make testing and understanding your code a bit harder.|Requires a bit more setup compared to Facades.| If overused, it can make your code harder to manage.|
+
+---
+
+## GET route vs POST route
+
+| |GET route | POST route|
+|:----|:----|:----|
+|Purpose| used to retrieve data from the server. fetching information without modifying any data. |used to send data to the server.creating or updating resources, like submitting a form.|
+|Characteristics| Data is passed via the URL.Less secure |Data is sent in the body of the HTTP request (not visible in the URL).More secure|
