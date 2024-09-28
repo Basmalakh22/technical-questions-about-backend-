@@ -53,6 +53,7 @@ technical questions , primarily focused on concepts related to programming, soft
 1. [Facades, Dependency Injection, and Helper Functions](#facades-dependency-injection-and-helper-functions)
 1. [GET route vs POST route](#get-route-vs-post-route)
 1. [Route::resource vs Route::controller](#routeresource-vs-routecontroller)
+1. [views and Blade templates](#views-and-blade-templates)
 
 ---
 ---
@@ -380,3 +381,17 @@ unless it's necessary, as too many JOINs slow things down.
 |:----|:----|:----|
 |Purpose |specifically designed to create a set of RESTful routes that correspond to typical CRUD operations (Create, Read, Update, Delete) for a resource.|is used to define a route to a single controller with multiple action methods based on the URI segments.|
 |Functionality|Automatically generates multiple routes based on resourceful conventions.|Routes are defined with a more manual approach; it maps URIs directly to controller methods based on naming conventions.|
+
+---
+
+## views and Blade templates
+
+- All Blade templates are views, but not all views are Blade templates. Blade is a powerful tool that enhances the way you create views in Laravel, allowing for cleaner, more maintainable code.
+- Using Blade templates is the best practice in Laravel development as it leverages the framework's full capabilities for rendering views efficiently.
+
+| |views | Blade templates|
+|:----|:----|:----|
+|File Extension |.php or .blade.php|.blade.php|
+|Functionality |Basic rendering of HTML/PHP |Dynamic rendering with advanced syntax|
+|Features| Limited to HTML/PHP| Supports control structures, components, and template inheritance|
+|Usage| Returned via view() helper| Defines the content and structure of the view using Blade syntax|
