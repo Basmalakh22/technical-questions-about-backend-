@@ -369,3 +369,4 @@ unless it's necessary, as too many JOINs slow things down.
 |:----|:----|:----|
 |Purpose| used to retrieve data from the server. fetching information without modifying any data. |used to send data to the server.creating or updating resources, like submitting a form.|
 |Characteristics| Data is passed via the URL.Less secure |Data is sent in the body of the HTTP request (not visible in the URL).More secure|
+| |GET is for retrieving data.|POST is for sending or modifying data.|
