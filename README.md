@@ -52,6 +52,7 @@ technical questions , primarily focused on concepts related to programming, soft
 1. [Service Container VS Service Provider](#service-container-vs-service-provider)
 1. [Facades, Dependency Injection, and Helper Functions](#facades-dependency-injection-and-helper-functions)
 1. [GET route vs POST route](#get-route-vs-post-route)
+1. [Route::resource vs Route::controller](#routeresource-vs-routecontroller)
 
 ---
 ---
@@ -370,3 +371,12 @@ unless it's necessary, as too many JOINs slow things down.
 |Purpose| used to retrieve data from the server. fetching information without modifying any data. |used to send data to the server.creating or updating resources, like submitting a form.|
 |Characteristics| Data is passed via the URL.Less secure |Data is sent in the body of the HTTP request (not visible in the URL).More secure|
 | |GET is for retrieving data.|POST is for sending or modifying data.|
+
+---
+
+## Route::resource vs Route::controller
+
+| |Route::resource | Route::controller|
+|:----|:----|:----|
+|Purpose |specifically designed to create a set of RESTful routes that correspond to typical CRUD operations (Create, Read, Update, Delete) for a resource.|is used to define a route to a single controller with multiple action methods based on the URI segments.|
+|Functionality|Automatically generates multiple routes based on resourceful conventions.|Routes are defined with a more manual approach; it maps URIs directly to controller methods based on naming conventions.|
