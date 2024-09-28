@@ -15,6 +15,7 @@ technical questions , primarily focused on concepts related to programming, soft
 1. [what is the difference between self and this?](#what-is-the-difference-between-self-and-this)
 1. [what is the difference between session and cookies?](#what-is-the-difference-between-session-and-cookies)
 1. [Namespace and Autoloading](#namespace-and-autoloading)
+1. [Using migrations and the Eloquent ORM in Laravel instead of over directly dealing with the database using raw SQL.](#using-migrations-and-the-eloquent-orm-in-laravel-instead-of-over-directly-dealing-with-the-database-using-raw-sql)
 
 ---
 ---
@@ -395,3 +396,9 @@ unless it's necessary, as too many JOINs slow things down.
 |Functionality |Basic rendering of HTML/PHP |Dynamic rendering with advanced syntax|
 |Features| Limited to HTML/PHP| Supports control structures, components, and template inheritance|
 |Usage| Returned via view() helper| Defines the content and structure of the view using Blade syntax|
+
+---
+
+## Using migrations and the Eloquent ORM in Laravel instead of over directly dealing with the database using raw SQL
+
+- Using migrations and the Eloquent ORM in Laravel enhances your development process by providing a structured, consistent, and easier way to manage database interactions and schema changes. This leads to more maintainable and less error-prone code, especially in collaborative environments.
