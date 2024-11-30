@@ -47,3 +47,139 @@ return response()->json(['message' => 'Success']);
 ```
 
 - Or by directly returning arrays from controllers, which Laravel converts to JSON automatically.
+
+## What is the difference between an API and a Web Service?
+
+- API: Broader concept, allowing communication between any two software components.
+- Web Service: A subset of APIs, specifically those that operate over the web using standard protocols like HTTP.
+- All web services are APIs, but not all APIs are web services.
+
+## What is the purpose of status codes in API responses?
+
+- HTTP status codes indicate the result of an API request:
+  - `200 OK`: Request succeeded.
+  - `201 Created`: Resource created successfully.
+  - `400 Bad Request`: The server couldn't understand the request due to invalid input.
+  - `401 Unauthorized`: Authentication is required.
+  - `404 Not Found`: The requested resource is unavailable.
+  - `500 Internal Server Error`: Server-side issue.
+
+## What is the difference between PUT and PATCH?
+
+- `PUT`: Replaces the entire resource.
+  - Example: Update a user’s profile with a new set of data.
+- `PATCH`: Partially updates a resource.
+  - Example: Only updating a user’s email address.
+
+## How do you secure an API?
+
+- Authentication: Verify the user's identity (e.g., API keys, OAuth tokens).
+- Authorization: Ensure the user has the right permissions.
+- Encrypt Communication: Use HTTPS to secure data.
+- Rate Limiting: Limit the number of requests to prevent abuse.
+- CORS: Control which domains can access your API.
+
+## How do you handle versioning in Laravel APIs?
+
+- Use version prefixes in routes (`Route::prefix('v1')->group(...)`) or subdomains (`v1.api.example.com`). Include the version in headers (`Accept: application/vnd.api.v1+json`).
+
+## What is rate limiting, and how do you implement it in Laravel APIs?
+
+Rate limiting restricts the number of requests from a client. Configure it in RouteServiceProvider using the RateLimiter class:
+
+```php
+RateLimiter::for('api', function () {
+    return Limit::perMinute(60);
+});
+```
+
+## How do you validate API requests in Laravel?
+
+- Use `FormRequest` classes:
+
+```php
+public function rules() {
+    return ['title' => 'required|string|max:255'];
+}
+```
+
+- Or inline validation
+
+```php
+$request->validate(['title' => 'required']);
+```
+
+## What is API middleware, and how is it used?
+
+- Middleware processes requests before they reach the controller. Example: `auth:sanctum` for authentication, or custom middleware for logging or CORS.
+
+## How do you implement pagination in API responses?
+
+```php
+$posts = Post::paginate(10);
+return response()->json($posts);
+```
+
+- Laravel automatically includes metadata like `current_page` and `last_page`.
+
+## What are API resources in Laravel? How do they help?
+
+- API resources (JsonResource) transform models into structured JSON responses:
+
+```php
+return new PostResource($post);
+```
+
+## How do you secure APIs in Laravel?
+
+- Use HTTPS, middleware for authentication (`auth:sanctum`), validation for inputs, and rate limiting.
+
+## What is the difference between Laravel Sanctum and Passport? When would you use each?
+
+- Sanctum: Simple, lightweight token management for SPAs and mobile apps.
+- Passport: Comprehensive OAuth2 implementation for complex scenarios requiring scopes and third-party integrations.
+
+## How do you handle API errors in Laravel?
+
+- Use `App\Exceptions\Handler` for centralized error handling. Return custom error responses:
+
+```php
+return response()->json(['error' => 'Not Found'], 404);
+```
+
+## How do you implement file uploads in Laravel APIs?
+
+```php
+$file = $request->file('photo')->store('photos');
+return response()->json(['path' => $file]);
+```
+
+## What is CORS, and how do you configure it in Laravel?
+
+CORS (Cross-Origin Resource Sharing)  is a security feature that restricts how resources on a server can be accessed by external domains. Configure it in `config/cors.php` and add the `\Fruitcake\Cors\HandleCors` middleware.
+
+## What is a webhook, and how would you handle it in Laravel?
+
+A webhook is a URL that receives POST requests from external systems. Example
+
+```php
+Route::post('/webhook', function (Request $request) {
+    // Process payload
+    return response('OK');
+});
+```
+
+## How do you test Laravel APIs?
+
+- Use feature tests
+
+```php
+$this->postJson('/api/posts', ['title' => 'Test'])
+     ->assertStatus(201);
+```
+
+- Or test manually using Postman.
+
+## How do you optimize API performance in Laravel?
+
+- Use caching (Redis, query caching), optimize database queries (eager loading), and compress JSON responses.
