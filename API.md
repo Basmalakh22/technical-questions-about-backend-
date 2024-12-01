@@ -95,11 +95,10 @@ return ['message' => 'Success'];
 Rate limiting restricts the number of requests from a client. Configure it in RouteServiceProvider using the RateLimiter class:
 
 ```php
-use Illuminate\Cache\RateLimiter;
 
-public function boot(RateLimiter $limiter)
+public function boot(Request $request)
 {
-    $limiter->for('custom-api', function () {
+    RateLimiter::for('custom-api', function () {
         return Limit::perMinute(10);  // Allow 10 requests per minute
     });
 }
