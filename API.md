@@ -18,15 +18,19 @@
 
 ## How do you create a RESTful API in Laravel?
 
-- Steps:
-  - Define routes in api.php (e.g., `Route::apiResource('posts', PostController::class);`).
-  - Create a resource controller using `php artisan make:controller PostController --resource`.
-  - Implement CRUD methods in the controller.
-  - Test the API using tools like Postman.
+- Define routes in api.php (e.g., `Route::apiResource('posts', PostController::class);`).
+- Create a resource controller using `php artisan make:controller PostController --resource`.
+- Implement CRUD methods in the controller.
+- Test the API using tools like Postman.
 
 ## What is a resource controller in Laravel? How is it used in APIs?
 
 - A resource controller provides predefined CRUD methods (`index`, `show`, `store`, `update`, `destroy`). It simplifies API development by adhering to RESTful standards.
+
+## What is the difference between apiResource and resource routes in Laravel?
+
+- `apiResource`: Generates routes for API-friendly CRUD operations (`index`, `show`, `store`, `update`, `destroy`). Excludes routes like create and edit, as these are for HTML forms in web apps.
+- `resource`: Includes all CRUD routes, including `create` and `edit`.
 
 ## How do you handle API authentication in Laravel?
 
@@ -183,7 +187,3 @@ $this->postJson('/api/posts', ['title' => 'Test'])
 
 - Use caching (Redis, query caching), optimize database queries (eager loading), and compress JSON responses.
 
-## What is the difference between apiResource and resource routes in Laravel?
-
-- `apiResource`: Generates routes for API-friendly CRUD operations (`index`, `show`, `store`, `update`, `destroy`). Excludes routes like create and edit, as these are for HTML forms in web apps.
-- `resource`: Includes all CRUD routes, including `create` and `edit`.
