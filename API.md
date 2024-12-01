@@ -6,7 +6,6 @@
 
 ## What are API routes, and how do they differ from web routes in Laravel?
 
-- API routes are defined in `api.php` and are stateless, meaning they don’t use sessions or cookies by default. Web routes `web.php` use stateful authentication, sessions, and cookies.
 - HTTP Method: Determines the type of action to perform:
   - `GET`: Retrieve data.
   - `POST`: Create new data.
@@ -15,6 +14,7 @@
 - Endpoint/URL: The path that identifies a specific resource or action in the system.
   - Example: `/api/users`, `/api/orders/123`.
 - Route Handler: The function or controller that processes the request and sends the appropriate response.
+- API routes are defined in `api.php` and are stateless, meaning they don’t use sessions or cookies by default. Web routes `web.php` use stateful authentication, sessions, and cookies.
 
 ## How do you create a RESTful API in Laravel?
 
