@@ -95,8 +95,19 @@ return ['message' => 'Success'];
 Rate limiting restricts the number of requests from a client. Configure it in RouteServiceProvider using the RateLimiter class:
 
 ```php
-RateLimiter::for('api', function () {
-    return Limit::perMinute(60);
+use Illuminate\Cache\RateLimiter;
+
+public function boot(RateLimiter $limiter)
+{
+    $limiter->for('custom-api', function () {
+        return Limit::perMinute(10);  // Allow 10 requests per minute
+    });
+}
+```
+
+```php
+Route::middleware('throttle:custom-api')->get('/data', function () {
+    return response()->json(['message' => 'Data']);
 });
 ```
 
