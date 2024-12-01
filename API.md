@@ -183,3 +183,8 @@ $this->postJson('/api/posts', ['title' => 'Test'])
 ## How do you optimize API performance in Laravel?
 
 - Use caching (Redis, query caching), optimize database queries (eager loading), and compress JSON responses.
+
+## What is the difference between apiResource and resource routes in Laravel?
+
+- `apiResource`: Generates routes for API-friendly CRUD operations (`index`, `show`, `store`, `update`, `destroy`). Excludes routes like create and edit, as these are for HTML forms in web apps.
+- `resource`: Includes all CRUD routes, including `create` and `edit`.
