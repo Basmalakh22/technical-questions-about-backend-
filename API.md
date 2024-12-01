@@ -51,6 +51,10 @@ return response()->json(['message' => 'Success']);
 
 - Or by directly returning arrays from controllers, which Laravel converts to JSON automatically.
 
+```php
+return ['message' => 'Success'];
+```
+
 ## What is the difference between an API and a Web Service?
 
 - API: Broader concept, allowing communication between any two software components.
