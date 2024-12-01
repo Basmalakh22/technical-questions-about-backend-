@@ -111,6 +111,16 @@ Route::middleware('throttle:custom-api')->get('/data', function () {
 });
 ```
 
+## What is the purpose of the ThrottleRequests middleware in Laravel?
+
+- ThrottleRequests limits the number of API requests from a single client in a specific timeframe to prevent abuse. You can configure it in RouteServiceProvider or apply it to specific routes:
+
+```php
+Route::middleware('throttle:custom-api')->get('/data', function () {
+    return response()->json(['message' => 'Data']);
+});
+```
+
 ## How do you validate API requests in Laravel?
 
 - Use `FormRequest` classes:
@@ -148,10 +158,6 @@ return response()->json($posts);
 ```php
 return new PostResource($post);
 ```
-
-## How do you secure APIs in Laravel?
-
-- Use HTTPS, middleware for authentication (`auth:sanctum`), validation for inputs, and rate limiting.
 
 ## What is the difference between Laravel Sanctum and Passport? When would you use each?
 
@@ -203,3 +209,12 @@ $this->postJson('/api/posts', ['title' => 'Test'])
 
 - Use caching (Redis, query caching), optimize database queries (eager loading), and compress JSON responses.
 
+## How do you handle nested resources in Laravel APIs?
+
+- Define nested routes in api.php for parent-child relationships:
+
+```php
+Route::apiResource('posts.comments', CommentController::class);
+```
+
+- Example URL: /posts/1/comments.
