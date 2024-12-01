@@ -118,7 +118,8 @@ $request->validate(['title' => 'required']);
 
 ## What is API middleware, and how is it used?
 
-- Middleware processes requests before they reach the controller. Example: `auth:sanctum` for authentication, or custom middleware for logging or CORS.
+- Middleware processes requests before they reach the controller.
+  - Example: `auth:sanctum` for authentication, or custom middleware for logging or CORS.
 
 ## How do you implement pagination in API responses?
 
