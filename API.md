@@ -217,3 +217,54 @@ Route::apiResource('posts.comments', CommentController::class);
 ```
 
 - Example URL: /posts/1/comments.
+
+## Path Parameters
+
+- Path parameters are part of the URL path and are typically used to identify a specific resource or endpoint. They are embedded directly into the URL and are required for the route to work properly.
+
+- Syntax: They are defined within curly braces {} in the route URL.
+- Location: They appear as part of the URL, often used to specify the ID or name of a resource.
+- Usage: Path parameters are generally used to identify specific resources, like user IDs, post IDs, etc.
+
+```php
+Route::get('/user/{id}', function ($id) {
+    return "User ID: " . $id;
+});
+```
+
+## Query Parameters
+
+- Query parameters are appended to the end of the URL using a ? symbol and are used to pass additional data to the server. They are optional and often used for filtering, sorting, or other operations that don't directly affect the resource's path.
+
+- Syntax: Query parameters are added after a ?, with each key-value pair separated by &.
+- Location: They come after the ? in the URL and are used for filtering or specifying additional options.
+- Usage: Query parameters are generally used to filter, search, or paginate data
+
+```php
+Route::get('/search', function (Request $request) {
+    $query = $request->query('query');
+    return "Search Query: " . $query;
+});
+```
+
+- URL Example: /search?query=coffee — here, query is the query parameter, and its value is coffee.
+- Output: The route will return "Search Query: coffee".
+
+## How do you implement sorting, filtering, and searching in API responses?
+
+- Use query parameters to dynamically modify query logic in controllers:
+
+```php
+$query = User::query();
+
+if ($request->filled('search')) {
+    $query->where('name', 'like', "%{$request->search}%");
+}
+
+if ($request->filled('sort')) {
+    $query->orderBy($request->sort, $request->get('direction', 'asc'));
+}
+
+return $query->paginate(10);
+
+```
