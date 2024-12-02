@@ -126,13 +126,14 @@ echo greet("Basmala"); // Outputs: Hello, Basmala!
 ## Understanding the 4 Pillars of OOP in PHP
 
 - Encapsulation is about bundling data and methods while restricting direct access. In PHP, we achieve this with access modifiers like private, protected, and public.
-- Abstraction hides implementation details and exposes only the essentials. In PHP, abstract classes and interfaces are used.
+- Abstraction hides implementation details and exposes only the essentials.
 - Inheritance allows us to reuse code by creating child classes from parent classes.
 - Polymorphism lets methods perform differently based on the object calling them.
 
 ### Encapsulation
 
 - Encapsulation = Private + (getter & setters)
+- about bundling data and methods while restricting direct access. In PHP, we achieve this with access modifiers like private, protected, and public.
 
 ```php
 class BankAccount {
@@ -178,6 +179,8 @@ echo $account->getBalance(); // Outputs: 120
 
 ### Inheritance
 
+- allows us to reuse code by creating child classes from parent classes.
+
 ```php
 class Animal {
     protected $name;
@@ -212,19 +215,125 @@ echo $cat->makeSound(); // Outputs: Meow
 
 ```
 
+- note: Properties and constants cannot be declared final, only classes and methods may be declared as final.
+- Final Classes: A class marked as final cannot be extended.
+- Final Methods: A method marked as final cannot be overridden in a subclass.
+
+```php
+class ParentClass {
+    final public function importantMethod() {
+        return "This method cannot be overridden!";
+    }
+}
+
+class ChildClass extends ParentClass {
+    // This will throw an error
+    public function importantMethod() {
+        return "Trying to override.";
+    }
+}
+```
+
+### Abstraction
+
+- can't be instantiated (can't create objects from)
+- made for other classes to inherit properties and methods from
+- abstract methods must be  declared
+- focuses on hiding implementation details and exposing only the essential features of an object.
+
+```php
+abstract class Animal {
+    protected $name;
+
+    public function __construct($name) {
+        $this->name = $name;
+    }
+
+    // Abstract method: must be implemented by subclasses
+    abstract public function makeSound();
+
+    // Concrete method: can be inherited or overridden
+    public function eat() {
+        return "{$this->name} is eating.";
+    }
+}
+
+class Dog extends Animal {
+    public function makeSound() {
+        return "{$this->name} says: Bark!";
+    }
+}
+
+class Cat extends Animal {
+    public function makeSound() {
+        return "{$this->name} says: Meow!";
+    }
+}
+
+// Usage
+$dog = new Dog("Rex");
+echo $dog->makeSound(); // Outputs: Rex says: Bark!
+echo $dog->eat();       // Outputs: Rex is eating.
+
+$cat = new Cat("Whiskers");
+echo $cat->makeSound(); // Outputs: Whiskers says: Meow!
+```
+
+## Polymorphism
+
+- allows objects of different classes to be treated as objects of a common superclass. It enables a single interface to represent different underlying forms (data types). In simpler terms, polymorphism means "one interface, many implementations."
+
+```php
+interface Shape {
+    public function calculateArea();
+}
+
+class Circle implements Shape {
+    private $radius;
+
+    public function __construct($radius) {
+        $this->radius = $radius;
+    }
+
+    public function calculateArea() {
+        return pi() * $this->radius * $this->radius;
+    }
+}
+
+class Rectangle implements Shape {
+    private $width;
+    private $height;
+
+    public function __construct($width, $height) {
+        $this->width = $width;
+        $this->height = $height;
+    }
+
+    public function calculateArea() {
+        return $this->width * $this->height;
+    }
+}
+
+function printArea(Shape $shape) {
+    echo "The area is: " . $shape->calculateArea() . PHP_EOL;
+}
+
+// Usage
+$circle = new Circle(5);
+$rectangle = new Rectangle(4, 6);
+
+printArea($circle);    // Outputs: The area is: 78.539816339744
+printArea($rectangle); // Outputs: The area is: 24
+```
+
 ---
 
-## what is the difference between constructor and destructor?
+## what is the acces modefiers?
 
-- Constructor: A method called when an object is instantiated, used to initialize the object.
-- Destructor: A method called when an object is destroyed, used to clean up resources.
-
----
-
-## what is the difference between trait and class?
-
-- Class: A blueprint for creating objects with properties and methods.
-- Trait: A mechanism for code reuse in single inheritance languages like PHP. Traits allow you to create reusable pieces of code.Traits are used to declare methods and abstract methods that can be used in multiple classes. and the methods can have any access modifier (public, private, or protected).
+- Access modifiers control the visibility of properties and methods in a class. They include:
+  - public: Accessible from anywhere.
+  - protected: Accessible within the class and its subclasses.
+  - private: Accessible only within the class.
 
 ---
 
@@ -271,26 +380,51 @@ class Admin extends User {
 
 ---
 
+## what is magic methods?
+
+- Magic methods in PHP are special methods that start with double underscores (__). Examples include`__construct`, `__destruct`,`__get`,`__set`,`__call`, etc. They allow you to define behavior for when properties or methods are accessed or invoked in a way that is not directly defined.
+
+---
+
+## what is the difference between constructor and destructor?
+
+- Constructor: A method called when an object is instantiated, used to initialize the object.
+- Destructor: A method called when an object is destroyed, used to clean up resources.
+
+```php
+class FileHandler {
+    private $file;
+
+    public function __construct($filename) {
+        $this->file = fopen($filename, 'w');
+        echo "File opened: $filename" . PHP_EOL;
+    }
+
+    // Destructor to clean up
+    public function __destruct() {
+        fclose($this->file);
+        echo "File closed." . PHP_EOL;
+    }
+}
+
+// Creating an object
+$fileHandler = new FileHandler("example.txt");
+```
+
+---
+
+## what is the difference between trait and class?
+
+- Class: A blueprint for creating objects with properties and methods.
+- Trait: A mechanism for code reuse in single inheritance languages like PHP. Traits allow you to create reusable pieces of code.Traits are used to declare methods and abstract methods that can be used in multiple classes. and the methods can have any access modifier (public, private, or protected).
+
+---
+
 ## what is the difference between extend and implment?
 
 - extend: Used to inherit from a class(inheritance).
 - implement: Used to implement an interface (polymorphism).
 - use extend when you want to inherit functionality, use implement when you want to define a contract for a class to follow.
-
----
-
-## what is the acces modefiers?
-
-- Access modifiers control the visibility of properties and methods in a class. They include:
-  - public: Accessible from anywhere.
-  - protected: Accessible within the class and its subclasses.
-  - private: Accessible only within the class.
-
----
-
-## what is magic methods?
-
-- Magic methods in PHP are special methods that start with double underscores (__). Examples include__construct, __destruct,__get, __set,__call, etc. They allow you to define behavior for when properties or methods are accessed or invoked in a way that is not directly defined.
 
 ---
 
@@ -318,3 +452,8 @@ class Admin extends User {
 ## What is the difference between HTTP and HTTPS?
 
 - HTTP is an unsecured protocol, while HTTPS is a secure version of HTTP that uses encryption (SSL/TLS) to protect data transmitted between the client and the server.
+
+## What is Overloading & Overriding?
+
+- Overloading: A feature where a method or function can have different signatures (e.g., a different number of parameters). PHP doesn't support method overloading directly but allows magic methods like `__call()`.
+- Overriding: When a subclass provides a specific implementation of a method that is already defined in its parent class.
