@@ -40,7 +40,7 @@ echo $car1->drive(); // The car is driving at 100 km/h (calling method)
 ## what is the difference between self and this?
 
 - $this: Refers to the current instance of the class(Refers to object properties).
-- self:: Refers to the class itself, not an instance. It is used to access static properties and methods.Access constant using self.not user $ because it is not represent variable but represent class construction.
+- self:: Refers to the class itself, not an instance. It is used to access static properties and methods.Access constant using self. not use `$` because it is not represent variable but represent class construction.
 
 ```php
 class Car {
