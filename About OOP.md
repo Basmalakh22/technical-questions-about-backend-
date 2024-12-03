@@ -416,7 +416,32 @@ $fileHandler = new FileHandler("example.txt");
 ## what is the difference between trait and class?
 
 - Class: A blueprint for creating objects with properties and methods.
-- Trait: A mechanism for code reuse in single inheritance languages like PHP. Traits allow you to create reusable pieces of code.Traits are used to declare methods and abstract methods that can be used in multiple classes. and the methods can have any access modifier (public, private, or protected).
+- Trait: A mechanism for code reuse, allowing methods and properties to be shared across multiple classes.
+
+```php
+trait A {
+    public function sayHello() {
+        echo "Hello from Trait A!";
+    }
+}
+
+trait B {
+    public function sayHello() {
+        echo "Hello from Trait B!";
+    }
+}
+
+class Example {
+    use A, B {
+        A::sayHello insteadof B;
+        B::sayHello as sayHelloFromB;
+    }
+}
+
+$example = new Example();
+$example->sayHello(); // Outputs: Hello from Trait A!
+$example->sayHelloFromB(); // Outputs: Hello from Trait B!
+```
 
 ---
 
@@ -428,17 +453,19 @@ $fileHandler = new FileHandler("example.txt");
 
 ---
 
+## Namespace and Autoloading
+
+- Namespace allows you to group related code under a specific name, improving code organization and reusability.
+- Autoloading in PHP is a mechanism that automatically loads PHP classes when they are needed, without having to manually require or include them.The most common way to implement autoloading in PHP is by using Composer, the dependency manager. Composer generates an autoloader that follows the PSR-4 standard for autoloading classes.
+
+---
+
 ## what is the difference between session and cookies?
 
 - Sessions: Store data on the server side, more secure, used for storing sensitive information.
 - Cookies: Store data on the client side (browser), less secure, used for storing less sensitive information like user preferences.
 
 ---
-
-## Namespace and Autoloading
-
-- Namespace allows you to group related code under a specific name, improving code organization and reusability.
-- Autoloading in PHP is a mechanism that automatically loads PHP classes when they are needed, without having to manually require or include them.The most common way to implement autoloading in PHP is by using Composer, the dependency manager. Composer generates an autoloader that follows the PSR-4 standard for autoloading classes.
 
 ## What is a Callback Function?
 
