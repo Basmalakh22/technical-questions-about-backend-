@@ -125,11 +125,6 @@ echo greet("Basmala"); // Outputs: Hello, Basmala!
 
 ## Understanding the 4 Pillars of OOP in PHP
 
-- Encapsulation is about bundling data and methods while restricting direct access. In PHP, we achieve this with access modifiers like private, protected, and public.
-- Abstraction hides implementation details and exposes only the essentials.
-- Inheritance allows us to reuse code by creating child classes from parent classes.
-- Polymorphism lets methods perform differently based on the object calling them.
-
 ### Encapsulation
 
 - Encapsulation = Private + (getter & setters)
