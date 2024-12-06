@@ -226,4 +226,4 @@ Factory: Used to create fake data for testing and seeding using model factories.
 ## What is the difference between Observer and Triggers?
 
 - Observer: In Laravel, an observer listens for Eloquent model events (e.g., saving, deleted) and acts on them.
-- Triggers: In databases, triggers are
+- Triggers: In databases, triggers are database-level objects that automatically execute predefined actions in response to certain events on a table, such as `INSERT`, `UPDATE`, or `DELETE`.
