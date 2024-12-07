@@ -96,8 +96,8 @@ X-Blade Component is a feature in Laravel that allows you to define reusable vie
 
 ## What is Seeder & Factory?
 
-Seeder: Used to populate the database with test data or default values.
-Factory: Used to create fake data for testing and seeding using model factories.
+- Seeder: Used to populate the database with test data or default values.
+- Factory: Used to create fake data for testing and seeding using model factories.
 
 ---
 
