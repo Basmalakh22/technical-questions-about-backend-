@@ -18,7 +18,11 @@
 
 ## Laravel request lifecycle?
 
-- The Laravel lifecycle starts when a server receives a request and directs it to the public/index.php file, which acts as the entry point. Laravel then loads the necessary framework components via service providers. The request passes through global and route-specific middleware before reaching the router. The router dispatches the request to the appropriate controller or closure, which generates a response. The response travels back through the middleware for any post-processing, and is then sent to the user.
+- The Laravel lifecycle starts when a server receives a request and directs it to the `public/index.php` file, which acts as the entry point.
+- Laravel then loads the necessary framework components via service providers.
+- The request passes through global and route-specific middleware before reaching the router.
+- The router dispatches the request to the appropriate controller or closure, which generates a response.
+- The response travels back through the middleware for any post-processing, and is then sent to the user.
 
 - The Laravel request life cycle includes the following steps:
   - Request: The user sends an HTTP request.
