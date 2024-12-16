@@ -122,9 +122,16 @@
 
 ## Service Container VS Service Provider
 
-| Service Container| Service Provider|
-|:----|:----|
-|is essentially a registry or a container that manages class dependencies and resolves them. It’s a powerful tool for performing dependency injection, where you can bind classes or interfaces and resolve them whenever needed.|is a mechanism to register services (including bindings to the Service Container) and configure how these services should be used by Laravel. Service providers are where you tell Laravel what to bind into the service container.|
+- `Service Container` as a dependency manager or a box where Laravel keeps all the objects, classes, and services it needs to run the application.
+  - It’s like a toolbox: Whenever Laravel (or you) need a specific tool (class, service, etc.), the Service Container knows how to find or build it.
+  - It handles dependency injection, which means it automatically provides the objects or values a class needs to function.
+- A `Service Provider` is a configuration file (or a manager) that tells the Service Container what to store in its toolbox and how to store it.
+  - It’s like a blueprint: It registers new services or objects with the Service Container.
+  - Laravel already comes with many default Service Providers (e.g., for routing, database, and session), and you can create your own.
+
+- Imagine a restaurant:
+  - `Service Provider`: It’s like the `chef's recipe`. It defines how to prepare a dish.
+  - `Service Container`: It’s the `kitchen`, where ingredients and tools (from the recipes) are stored and used to make the dish.
 
 ---
 
@@ -246,13 +253,6 @@
 ## What is a Transaction?
 
 - A Transaction in databases ensures that a set of operations is completed successfully. If any operation fails, the transaction can be rolled back to maintain data consistency.
-
----
-
-## What is Seeder &Factory?
-
-- Seeder: Used to populate the database with test data or default values.
-- Factory: Used to create fake data for testing and seeding using model factories.
 
 ---
 
