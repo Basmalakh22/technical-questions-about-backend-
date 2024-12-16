@@ -44,6 +44,15 @@
 
 ---
 
+## PUT route vs PATCH route
+
+| |PUT route | PATCH route|
+|:----|:----|:----|
+|Purpose| Replace the entire resource.|Update specific fields.|
+|Input Required|Complete resource data. |Only the fields to update.|
+
+---
+
 ## Route::resource vs Route::controller
 
 | |Route::resource | Route::controller|
