@@ -57,7 +57,7 @@
 
 | |Route::resource | Route::apiResource | Route::controller|
 |:----|:----|:----|:----|
-|Purpose|Automatically generates routes for a resourceful controller that typically handles CRUD operations.| Similar to `Route::resource`, but excludes routes like create and edit since they are not needed in API development.|Manually maps a set of routes to controller methods using a single declaration.|
+|Purpose|Automatically generates routes for a resourceful controller that typically handles CRUD operations.| Similar to `Route::resource`, but excludes routes like `create` and `edit` since they are not needed in API development.|Manually maps a set of routes to controller methods using a single declaration.|
 |Use Case|When you need both web-based and API-compatible CRUD routes (including routes like `create` and `edit` for rendering forms).|When building RESTful APIs, where `create` and `edit` routes are unnecessary.| When you want more flexibility in naming routes and actions or the controller doesn't strictly follow CRUD operations.|
 
 ---
