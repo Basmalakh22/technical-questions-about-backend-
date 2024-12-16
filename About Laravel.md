@@ -144,7 +144,7 @@
 - `Dependency Injection (DI)` is a way to pass the things (classes, services, etc.) that your class needs directly into it, instead of creating them inside the class. This makes your code more flexible and testable.
   - Analogy: Imagine your class is like a worker who needs tools to do their job. Instead of forcing the worker to find their own tools, you give them the tools they need.
   - Why Use? It allows you to easily swap out or change dependencies without rewriting the class.
-  
+
 - `Helper Functions`are simple utility functions that don’t require classes or objects. They’re quick and convenient for repetitive or small tasks. Laravel provides a lot of built-in helpers, and you can also define your own.
   - Analogy: A Swiss Army Knife. You pull out the exact tool you need for a quick task.
   - Why Use? They’re quick, easy, and don’t require much setup.
@@ -165,15 +165,7 @@
 
 ---
 
-## What is a Facade? What design patterns have you used in your projects?
-
-- A Facade is a design pattern that provides a simplified interface to a complex subsystem. In Laravel, facades are static proxies to underlying classes in the service container.
-
----
-
-## What is Dependency Injection?
-
-- Dependency Injection (DI) is a design pattern where an object receives its dependencies from an external source rather than creating them itself. It promotes loose coupling and better testability. In Laravel, DI is often done automatically by the service container.
+## What design patterns have you used in your projects?
 
 ---
 
@@ -181,18 +173,6 @@
 
 - Front-end: Optimizing images, minimizing CSS and JavaScript, and implementing lazy loading can improve performance.
 - Back-end: Optimizing database queries, using caching, reducing redundant operations, and using queues for time-consuming tasks improve server-side performance.
-
----
-
-## What is an Observer?
-
-- Observer is a design pattern in Laravel used to listen for model events (such as creating, updating, and deleting) and perform actions when those events occur.
-
----
-
-## What is Repository Pattern?
-
-- Repository Pattern abstracts the data access layer, providing a collection-like interface for accessing domain objects. It separates the logic of querying data from the rest of the application.
 
 ---
 
