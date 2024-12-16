@@ -53,12 +53,11 @@
 
 ---
 
-## Route::resource vs Route::controller
+## Route::resource vs Route::apiResource vs Route::controller
 
-| |Route::resource | Route::controller|
-|:----|:----|:----|
-|Purpose |specifically designed to create a set of RESTful routes that correspond to typical CRUD operations (Create, Read, Update, Delete) for a resource.|is used to define a route to a single controller with multiple action methods based on the URI segments.|
-|Functionality|Automatically generates multiple routes based on resourceful conventions.|Routes are defined with a more manual approach; it maps URIs directly to controller methods based on naming conventions.|
+| |Route::resource | Route::apiResource | Route::controller|
+|:----|:----|:----|:----|
+|Purpose|Automatically generates routes for a resourceful controller that typically handles CRUD operations.| Similar to Route::resource, but excludes routes like create and edit since they are not needed in API development.|Manually maps a set of routes to controller methods using a single declaration.|
 
 ---
 
